@@ -19,25 +19,25 @@
     .border-left
     .border-right
     %header.is-fixed
-      = link_to image_tag('logo.jpg'), '#', id: 'cd-logo'
+      = link_to image_tag('logo.jpg'), '#section-intro', id: 'cd-logo', class: 'page-scroll'
       %nav#cd-top-nav
-    -#   = link_to '#0', id: 'cd-menu-trigger' do
-    -#     %span.cd-menu-icon
-    -# %nav#cd-lateral-nav
-    -#   .nav-inner
-    -#     .menu-header #NEVERSLEEP
-    -#     %ul.cd-navigation.cd-single-item-wrapper
-    -#       %li= link_to 'Home', '#section-intro', class: 'page-scroll'
-    -#       %li= link_to 'Bio', '#bio', class: 'page-scroll'
-    -#       %li= link_to 'Events', '#events', class: 'page-scroll'
-    -#       %li= link_to 'Artists', '#artists', class: 'page-scroll'
-    -#       %li= link_to 'Beats', '#beats', class: 'page-scroll'
-    -#       %li= link_to 'Videos', '#videos', class: 'page-scroll'
-    -#       %li= link_to 'Contact', '#contact', class: 'page-scroll'
-    -#     .social-icons
-    -#       = link_to 'https://www.facebook.com', target: 'blank' do
-    -#         = fa_icon 'facebook-square'
-    -#       = link_to 'https://www.twitter.com', target: 'blank' do
-    -#         = fa_icon 'twitter-square'
+      = link_to '#0', id: 'cd-menu-trigger' do
+        %span.cd-menu-icon
+    %nav#cd-lateral-nav
+      .nav-inner
+        .menu-header #NEVERSLEEP
+        %ul.cd-navigation.cd-single-item-wrapper
+          %li= link_to 'Home', '#section-intro', class: 'page-scroll'
+          %li= link_to 'Bio', '#bio', class: 'page-scroll'
+          %li= link_to 'Events', '#events', class: 'page-scroll'
+          %li= link_to 'Artists', '#artists', class: 'page-scroll'
+          %li= link_to 'Beats', '#beats', class: 'page-scroll'
+          %li= link_to 'Videos', '#videos', class: 'page-scroll'
+          %li= link_to 'Contact', '#contact', class: 'page-scroll'
+        .social-icons
+          = link_to 'https://www.facebook.com/InsomniakzBeats', target: 'blank' do
+            = fa_icon 'facebook-square'
+          = link_to 'https://www.twitter.com/InsomniakzMusic', target: 'blank' do
+            = fa_icon 'twitter-square'
     = yield
     = javascript_include_tag 'application'
