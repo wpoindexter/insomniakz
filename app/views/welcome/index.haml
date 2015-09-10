@@ -1,0 +1,13 @@
+#body-content
+  %section#section-intro.intro-parallax.full-height
+    .full-cover.bg-image{data: {stellar: {ratio: '0.2'}}, style: "background-image: url(#{image_path('intro.jpg')});"}
+    .cover
+    .intro-caption.text-white{data: {stellar: {ratio: '0.6'}}}
+      %h1
+        %span.bg-main.text-white INSOMNIAKZ
+        %br
+        Never Sleep
+      %p Music Production, Song Writing, Studio Engineering
+    = link_to '#bio', class: 'scroll-down-arrow page-scroll text-center' do
+      %span.text-white
+        = fa_icon 'arrow-down'

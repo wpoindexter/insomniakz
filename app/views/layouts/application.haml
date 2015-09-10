@@ -1,0 +1,43 @@
+!!!
+%html
+  %meta{charset: 'utf-8'}
+  %meta{content: 'Insomniakz - Never Sleep', name: 'description'}
+  %meta{content: 'Insomniakz', name: 'author'}
+  = viewport_meta_tag maximum_scale: '1.0'
+  %title Insomniakz - Never Sleep
+  = favicon_link_tag 'favicon.png'
+  = stylesheet_link_tag 'application'
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  %body
+    #preloader
+      .pulse
+    .border-top
+    .border-bottom
+    .border-left
+    .border-right
+    %header.is-fixed
+      = link_to image_tag('logo.jpg'), root_path, id: 'cd-logo'
+      %nav#cd-top-nav
+      = link_to '#0', id: 'cd-menu-trigger' do
+        %span.cd-menu-icon
+    %nav#cd-lateral-nav
+      .nav-inner
+        .menu-header Menu
+        %ul.cd-navigation.cd-single-item-wrapper
+          %li= link_to 'Home', root_path, class: 'page-scroll'
+          %li= link_to 'Bio', '#bio', class: 'page-scroll'
+          %li= link_to 'Events', '#events', class: 'page-scroll'
+          %li= link_to 'Artists', '#artists', class: 'page-scroll'
+          %li= link_to 'Beats', '#beats', class: 'page-scroll'
+          %li= link_to 'Videos', '#videos', class: 'page-scroll'
+          %li= link_to 'Contact', '#contact', class: 'page-scroll'
+        .social-icons
+          = link_to 'https://www.facebook.com', target: 'blank' do
+            = fa_icon 'facebook-square'
+          = link_to 'https://www.twitter.com', target: 'blank' do
+            = fa_icon 'twitter-square'
+    = yield
+    = javascript_include_tag 'application'
