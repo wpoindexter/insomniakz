@@ -20,6 +20,7 @@ gem 'font-awesome-rails'
 gem 'connection_pool'
 gem 'dalli-elasticache'
 gem 'owlcarousel-rails'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
